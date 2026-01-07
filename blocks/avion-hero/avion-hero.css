@@ -1,0 +1,108 @@
+.avion-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  padding: 60px 40px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.avion-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 20%, rgba(200, 230, 240, 0.6) 40%, rgba(120, 200, 210, 0.5) 60%, rgba(180, 220, 230, 0.4) 80%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.avion-hero::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 40%;
+  height: 80%;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.7) 0%, rgba(200, 235, 245, 0.5) 50%, rgba(100, 190, 200, 0.4) 100%);
+  clip-path: polygon(40% 0, 100% 15%, 90% 100%, 0 85%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.avion-hero > div {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  width: 100%;
+}
+
+.avion-hero > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.avion-hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.15;
+  color: #0a2458;
+  margin: 0;
+}
+
+.avion-hero h1 em {
+  font-style: italic;
+}
+
+.avion-hero p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  margin: 0;
+}
+
+.avion-hero p:last-child {
+  margin-top: 10px;
+}
+
+.avion-hero a {
+  display: inline-block;
+  background-color: #0a2458;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+}
+
+.avion-hero a:hover {
+  background-color: #081c42;
+}
+
+@media (max-width: 768px) {
+  .avion-hero {
+    padding: 40px 20px;
+    min-height: 300px;
+  }
+
+  .avion-hero h1 {
+    font-size: 32px;
+  }
+
+  .avion-hero::before,
+  .avion-hero::after {
+    width: 70%;
+    opacity: 0.5;
+  }
+}
