@@ -1,0 +1,106 @@
+.dual-signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dual-signup .signup-card {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dual-signup .card-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.2;
+}
+
+.dual-signup .new-badge {
+  background-color: #f5b600;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dual-signup .card-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  font-family: sans-serif;
+  max-width: 480px;
+}
+
+.dual-signup .card-cta {
+  margin-top: 16px;
+}
+
+.dual-signup .card-cta a {
+  display: inline-block;
+  background-color: #001a70;
+  color: #fff;
+  padding: 18px 40px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans-serif;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.dual-signup .card-cta a:hover {
+  background-color: #002a9e;
+}
+
+.dual-signup .card-secondary {
+  font-size: 15px;
+  color: #333;
+  font-family: sans-serif;
+  margin-top: 16px;
+}
+
+.dual-signup .card-secondary a.text-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #001a70;
+  text-decoration: underline;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.dual-signup .card-secondary a.text-link:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .dual-signup {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .dual-signup .signup-card {
+    min-width: 100%;
+  }
+
+  .dual-signup .card-cta a {
+    width: 100%;
+    text-align: center;
+  }
+}
