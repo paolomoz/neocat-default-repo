@@ -1,0 +1,102 @@
+.sign-up-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sign-up-options > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sign-up-options > div > div {
+  padding: 20px 0;
+}
+
+.sign-up-options h3 {
+  font-family: sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sign-up-options .new-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5c518;
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.sign-up-options p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.sign-up-options p a:not(.text-link) {
+  display: inline-block;
+  background-color: #002d72;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.sign-up-options p a:not(.text-link):hover {
+  background-color: #001d4a;
+}
+
+.sign-up-options .text-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #0051a5;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.sign-up-options .text-link:hover {
+  color: #003d7a;
+}
+
+@media (max-width: 768px) {
+  .sign-up-options {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 16px;
+  }
+
+  .sign-up-options > div {
+    min-width: 100%;
+  }
+
+  .sign-up-options h3 {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .sign-up-options p a:not(.text-link) {
+    display: block;
+    text-align: center;
+    padding: 12px 24px;
+  }
+}
