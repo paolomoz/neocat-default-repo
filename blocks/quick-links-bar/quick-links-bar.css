@@ -1,0 +1,94 @@
+.quick-links-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 24px 40px;
+  gap: 60px;
+  background-color: #d4e4d4;
+  font-family: Gotham-Medium, 'Gotham Medium', Arial, sans-serif;
+}
+
+.quick-links-bar > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.quick-links-bar > div > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-links-bar > div > div:first-child img {
+  width: 40px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+}
+
+.quick-links-bar > div > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.quick-links-bar > div > div:last-child a {
+  font-family: Gotham-Book, 'Gotham Book', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  color: #c45a3b;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.quick-links-bar > div > div:last-child a::after {
+  content: '→';
+  font-size: 16px;
+  color: #c45a3b;
+}
+
+.quick-links-bar > div > div:last-child a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .quick-links-bar {
+    gap: 40px;
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-links-bar {
+    flex-wrap: wrap;
+    gap: 24px 40px;
+    padding: 20px;
+  }
+  
+  .quick-links-bar > div {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-links-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .quick-links-bar > div {
+    flex: none;
+    width: 100%;
+  }
+}
