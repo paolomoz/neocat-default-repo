@@ -1,0 +1,111 @@
+.sign-up-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sign-up-options > div {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sign-up-options .option-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sign-up-options .option-title .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc429;
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sign-up-options .option-description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.sign-up-options .option-description p {
+  margin: 0;
+}
+
+.sign-up-options .option-cta {
+  margin-top: 20px;
+}
+
+.sign-up-options .option-cta a {
+  display: inline-block;
+  background-color: #002d72;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.sign-up-options .option-cta a:hover {
+  background-color: #001d4a;
+}
+
+.sign-up-options .option-secondary {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+.sign-up-options .option-secondary p {
+  margin: 0;
+}
+
+.sign-up-options .option-secondary a {
+  color: #002d72;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.sign-up-options .option-secondary a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .sign-up-options {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .sign-up-options > div {
+    min-width: 100%;
+  }
+
+  .sign-up-options .option-cta a {
+    width: 100%;
+    text-align: center;
+  }
+}
