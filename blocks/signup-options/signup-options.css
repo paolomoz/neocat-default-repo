@@ -1,62 +1,67 @@
 .signup-options {
-  background: transparent;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 60px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.signup-options .header-row {
+.signup-options > div:first-child {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.signup-options .header-row .section-title {
+.signup-options > div:first-child > div:first-child {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 48px;
   font-weight: 400;
-  color: #1a2a3a;
-  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  margin-bottom: 20px;
 }
 
-.signup-options .header-row .section-intro {
-  font-family: Arial, Helvetica, sans-serif;
+.signup-options > div:first-child > div:last-child {
   font-size: 16px;
   line-height: 1.6;
-  color: #1a2a3a;
+  color: #333;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.signup-options .options-container {
+.signup-options-columns {
   display: flex;
-  gap: 0;
+  gap: 40px;
   justify-content: center;
 }
 
-.signup-options .option-card {
+.signup-options > div:nth-child(2),
+.signup-options > div:nth-child(3) {
   flex: 1;
-  max-width: 450px;
-  padding: 30px 50px;
+  max-width: 400px;
+  padding: 0 30px;
 }
 
-.signup-options .option-card.rbc-client {
-  border-right: 1px solid #b8c9b8;
+.signup-options > div:nth-child(2) {
+  border-right: 1px solid #e0e0e0;
+  padding-right: 60px;
 }
 
-.signup-options .option-card .card-title {
-  font-family: Arial, Helvetica, sans-serif;
+.signup-options > div:nth-child(3) {
+  padding-left: 60px;
+}
+
+.signup-options > div:nth-child(2) > div:first-child,
+.signup-options > div:nth-child(3) > div:first-child {
   font-size: 24px;
   font-weight: 700;
-  color: #1a2a3a;
-  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.signup-options .new-badge {
-  background-color: #f5d547;
-  color: #1a2a3a;
+.new-badge {
+  background-color: #ffd700;
+  color: #1a1a1a;
   font-size: 12px;
   font-weight: 700;
   padding: 4px 12px;
@@ -64,103 +69,114 @@
   text-transform: uppercase;
 }
 
-.signup-options .option-card .card-description {
-  font-family: Arial, Helvetica, sans-serif;
+.signup-options > div:nth-child(2) > div:nth-child(2),
+.signup-options > div:nth-child(3) > div:nth-child(2) {
   font-size: 16px;
   line-height: 1.6;
-  color: #1a2a3a;
-  margin: 0 0 30px 0;
+  color: #333;
+  margin-bottom: 24px;
 }
 
-.signup-options .option-card .cta-button {
+.signup-options > div:nth-child(2) > div:nth-child(3) a,
+.signup-options > div:nth-child(3) > div:nth-child(3) a {
   display: inline-block;
-  margin-bottom: 20px;
-}
-
-.signup-options .option-card .cta-button a {
-  display: inline-block;
-  background-color: #0f4c5c;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #003168;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
-  text-decoration: none;
   padding: 16px 32px;
   border-radius: 30px;
+  text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
-.signup-options .option-card .cta-button a:hover {
-  background-color: #0a3a47;
+.signup-options > div:nth-child(2) > div:nth-child(3) a:hover,
+.signup-options > div:nth-child(3) > div:nth-child(3) a:hover {
+  background-color: #002450;
 }
 
-.signup-options .option-card .secondary-link {
-  font-family: Arial, Helvetica, sans-serif;
+.signup-options > div:nth-child(2) > div:nth-child(4) {
+  margin-top: 20px;
   font-size: 14px;
-  color: #1a2a3a;
+  color: #333;
 }
 
-.signup-options .option-card .secondary-link a {
-  color: #0f4c5c;
+.signup-options > div:nth-child(2) > div:nth-child(4) a {
+  color: #003168;
   text-decoration: underline;
   background: none;
   border: none;
   padding: 0;
-  border-radius: 0;
 }
 
-.signup-options .eligibility-row {
+.signup-options > div:nth-child(2) > div:nth-child(4) a:hover {
+  color: #002450;
+}
+
+.signup-options > div:last-child {
   text-align: center;
-  margin-top: 40px;
-  padding-top: 40px;
-  border-top: 1px solid #b8c9b8;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
 }
 
-.signup-options .eligibility-row a {
-  color: #0f4c5c;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  text-decoration: underline;
-  background: none;
-  border: none;
-  padding: 0;
-  border-radius: 0;
-}
-
-.signup-options .eligibility-row .info-icon {
-  display: inline-flex;
+.signup-options > div:last-child > div {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #0f4c5c;
+  gap: 8px;
+}
+
+.eligibility-link {
+  color: #003168;
+  text-decoration: underline;
+  font-size: 16px;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.eligibility-link:hover {
+  color: #002450;
+}
+
+.tooltip-btn {
+  background: none;
+  border: 2px solid #003168;
+  color: #003168;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   font-size: 12px;
-  color: #0f4c5c;
-  margin-left: 5px;
-  vertical-align: middle;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
-  .signup-options {
-    padding: 40px 20px;
-  }
-  
-  .signup-options .header-row .section-title {
+  .signup-options > div:first-child > div:first-child {
     font-size: 36px;
   }
-  
-  .signup-options .options-container {
+
+  .signup-options-columns {
     flex-direction: column;
   }
-  
-  .signup-options .option-card {
+
+  .signup-options > div:nth-child(2),
+  .signup-options > div:nth-child(3) {
     max-width: 100%;
-    padding: 30px 20px;
+    padding: 30px 0;
   }
-  
-  .signup-options .option-card.rbc-client {
+
+  .signup-options > div:nth-child(2) {
     border-right: none;
-    border-bottom: 1px solid #b8c9b8;
+    border-bottom: 1px solid #e0e0e0;
+    padding-right: 0;
+  }
+
+  .signup-options > div:nth-child(3) {
+    padding-left: 0;
   }
 }

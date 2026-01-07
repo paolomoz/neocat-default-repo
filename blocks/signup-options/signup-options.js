@@ -1,109 +1,57 @@
 export default function decorate(block) {
   const rows = [...block.children];
   
-  // Clear and rebuild structure
-  block.innerHTML = '';
-  
-  // Process header row (first row)
+  // First row is header section
   if (rows[0]) {
-    const headerRow = document.createElement('div');
-    headerRow.className = 'header-row';
-    
-    const cells = [...rows[0].children];
-    
-    if (cells[0]) {
-      const title = document.createElement('h2');
-      title.className = 'section-title';
-      title.textContent = cells[0].textContent.trim();
-      headerRow.appendChild(title);
-    }
-    
-    if (cells[1]) {
-      const intro = document.createElement('p');
-      intro.className = 'section-intro';
-      intro.textContent = cells[1].textContent.trim();
-      headerRow.appendChild(intro);
-    }
-    
-    block.appendChild(headerRow);
+    rows[0].classList.add('signup-options-header');
+    const headerCells = [...rows[0].children];
+    if (headerCells[0]) headerCells[0].classList.add('signup-options-title');
+    if (headerCells[1]) headerCells[1].classList.add('signup-options-description');
   }
-  
-  // Create options container
-  const optionsContainer = document.createElement('div');
-  optionsContainer.className = 'options-container';
-  
-  // Process option rows (rows 1 and 2)
-  [rows[1], rows[2]].forEach((row) => {
-    if (!row) return;
-    
-    const cells = [...row.children];
-    const cardType = cells[0]?.textContent.trim();
-    
-    if (cardType === 'rbc-client' || cardType === 'everyone-else') {
-      const card = document.createElement('div');
-      card.className = `option-card ${cardType}`;
-      
-      // Title
-      if (cells[1]) {
-        const titleDiv = document.createElement('h3');
-        titleDiv.className = 'card-title';
-        titleDiv.innerHTML = cells[1].innerHTML;
-        card.appendChild(titleDiv);
+
+  // Create columns wrapper for options
+  const columnsWrapper = document.createElement('div');
+  columnsWrapper.classList.add('signup-options-columns');
+
+  // Second row is RBC clients option
+  if (rows[1]) {
+    rows[1].classList.add('signup-options-column', 'signup-options-rbc');
+    const rbcCells = [...rows[1].children];
+    if (rbcCells[0]) rbcCells[0].classList.add('signup-options-column-title');
+    if (rbcCells[1]) rbcCells[1].classList.add('signup-options-column-desc');
+    if (rbcCells[2]) rbcCells[2].classList.add('signup-options-column-cta');
+    if (rbcCells[3]) rbcCells[3].classList.add('signup-options-column-secondary');
+    columnsWrapper.appendChild(rows[1]);
+  }
+
+  // Third row is Everyone else option
+  if (rows[2]) {
+    rows[2].classList.add('signup-options-column', 'signup-options-everyone');
+    const everyoneCells = [...rows[2].children];
+    if (everyoneCells[0]) {
+      everyoneCells[0].classList.add('signup-options-column-title');
+      // Check if NEW badge exists and wrap it properly
+      const titleText = everyoneCells[0].innerHTML;
+      if (titleText.includes('NEW!') && !titleText.includes('new-badge')) {
+        everyoneCells[0].innerHTML = titleText.replace('NEW!', '<span class="new-badge">NEW!</span>');
       }
-      
-      // Description
-      if (cells[2]) {
-        const descDiv = document.createElement('p');
-        descDiv.className = 'card-description';
-        descDiv.textContent = cells[2].textContent.trim();
-        card.appendChild(descDiv);
-      }
-      
-      // CTA Button
-      if (cells[3]) {
-        const ctaDiv = document.createElement('div');
-        ctaDiv.className = 'cta-button';
-        ctaDiv.innerHTML = cells[3].innerHTML;
-        card.appendChild(ctaDiv);
-      }
-      
-      // Secondary link
-      if (cells[4] && cells[4].textContent.trim()) {
-        const secondaryDiv = document.createElement('div');
-        secondaryDiv.className = 'secondary-link';
-        secondaryDiv.innerHTML = cells[4].innerHTML;
-        card.appendChild(secondaryDiv);
-      }
-      
-      optionsContainer.appendChild(card);
     }
-  });
-  
-  block.appendChild(optionsContainer);
-  
-  // Process eligibility row (last row)
+    if (everyoneCells[1]) everyoneCells[1].classList.add('signup-options-column-desc');
+    if (everyoneCells[2]) everyoneCells[2].classList.add('signup-options-column-cta');
+    if (everyoneCells[3]) everyoneCells[3].classList.add('signup-options-column-secondary');
+    columnsWrapper.appendChild(rows[2]);
+  }
+
+  // Insert columns wrapper after header
+  if (rows[0] && rows[0].nextSibling) {
+    block.insertBefore(columnsWrapper, rows[0].nextSibling);
+  } else {
+    block.appendChild(columnsWrapper);
+  }
+
+  // Fourth row is eligibility footer
   if (rows[3]) {
-    const cells = [...rows[3].children];
-    const rowType = cells[0]?.textContent.trim();
-    
-    if (rowType === 'eligibility') {
-      const eligibilityRow = document.createElement('div');
-      eligibilityRow.className = 'eligibility-row';
-      
-      if (cells[1]) {
-        const linkWrapper = document.createElement('span');
-        linkWrapper.innerHTML = cells[1].innerHTML;
-        
-        const infoIcon = document.createElement('span');
-        infoIcon.className = 'info-icon';
-        infoIcon.textContent = 'i';
-        infoIcon.setAttribute('aria-label', 'More information');
-        
-        eligibilityRow.appendChild(linkWrapper);
-        eligibilityRow.appendChild(infoIcon);
-      }
-      
-      block.appendChild(eligibilityRow);
-    }
+    rows[3].classList.add('signup-options-footer');
+    block.appendChild(rows[3]);
   }
 }
