@@ -1,0 +1,116 @@
+.dual-signup {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.dual-signup > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.dual-signup > div:first-child {
+  border-right: 1px solid #e0e0e0;
+  padding-right: 40px;
+}
+
+.dual-signup > div:last-child {
+  padding-left: 40px;
+}
+
+.dual-signup-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.dual-signup-heading .dual-signup-badge {
+  display: inline-block;
+  background-color: #ffc627;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.dual-signup-description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.dual-signup-cta {
+  margin-bottom: 20px;
+}
+
+.dual-signup-cta a {
+  display: inline-block;
+  background-color: #003168;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dual-signup-cta a:hover {
+  background-color: #002450;
+}
+
+.dual-signup-secondary {
+  font-size: 14px;
+  color: #333;
+}
+
+.dual-signup-secondary a {
+  color: #003168;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.dual-signup-secondary a:hover {
+  color: #002450;
+}
+
+@media (max-width: 768px) {
+  .dual-signup {
+    flex-direction: column;
+    gap: 0;
+    padding: 24px;
+  }
+
+  .dual-signup > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-right: 0;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+
+  .dual-signup > div:last-child {
+    padding-left: 0;
+  }
+
+  .dual-signup-cta a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
