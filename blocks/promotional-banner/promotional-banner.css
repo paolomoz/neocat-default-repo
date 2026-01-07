@@ -1,0 +1,101 @@
+.promotional-banner {
+  padding: 32px 40px;
+}
+
+.promotional-banner > div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.promotional-banner .banner-logo {
+  flex-shrink: 0;
+}
+
+.promotional-banner .banner-logo img {
+  width: 120px;
+  height: 120px;
+  max-width: none;
+  object-fit: contain;
+}
+
+.promotional-banner .banner-heading {
+  flex: 0 0 auto;
+}
+
+.promotional-banner .banner-heading h4 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.promotional-banner .banner-description {
+  flex: 1 1 300px;
+}
+
+.promotional-banner .banner-description p {
+  margin: 0;
+  font-size: 18px;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+.promotional-banner .banner-cta {
+  flex-shrink: 0;
+}
+
+.promotional-banner .banner-cta a {
+  display: inline-block;
+  background-color: #2dd4a8;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.promotional-banner .banner-cta a:hover {
+  background-color: #25c49a;
+}
+
+@media (max-width: 1024px) {
+  .promotional-banner > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .promotional-banner .banner-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .promotional-banner {
+    padding: 24px 20px;
+  }
+
+  .promotional-banner .banner-logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .promotional-banner .banner-heading h4 {
+    font-size: 20px;
+  }
+
+  .promotional-banner .banner-cta {
+    width: 100%;
+  }
+
+  .promotional-banner .banner-cta a {
+    display: block;
+    text-align: center;
+  }
+}
