@@ -1,0 +1,113 @@
+.sign-up-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 50px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sign-up-options > div {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sign-up-options .option-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.sign-up-options .option-title .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc429;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.sign-up-options .option-description {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+.sign-up-options .option-description p {
+  margin: 0;
+}
+
+.sign-up-options .option-cta {
+  margin-top: 28px;
+}
+
+.sign-up-options .option-cta a {
+  display: inline-block;
+  background-color: #002d72;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 20px 48px;
+  border-radius: 32px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.sign-up-options .option-cta a:hover {
+  background-color: #001d4a;
+}
+
+.sign-up-options .option-secondary {
+  font-size: 15px;
+  color: #333;
+  margin-top: 16px;
+}
+
+.sign-up-options .option-secondary p {
+  margin: 0;
+}
+
+.sign-up-options .option-secondary a {
+  color: #002d72;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.sign-up-options .option-secondary a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .sign-up-options {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .sign-up-options > div {
+    min-width: 100%;
+  }
+
+  .sign-up-options .option-cta a {
+    width: 100%;
+    text-align: center;
+  }
+}
