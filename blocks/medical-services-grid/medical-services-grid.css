@@ -1,0 +1,105 @@
+.medical-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.medical-services-grid .service-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 160px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.medical-services-grid .service-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.medical-services-grid .service-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 2px 0;
+  line-height: 1.3;
+}
+
+.medical-services-grid .service-provider {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  margin: 0 0 20px 0;
+}
+
+.medical-services-grid .service-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medical-services-grid .service-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #000;
+  stroke-width: 1.2;
+  fill: none;
+}
+
+.medical-services-grid .service-status {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.medical-services-grid .service-status.status-accepting {
+  color: #3eb34f;
+}
+
+.medical-services-grid .service-status.status-not-accepting {
+  color: #e64a3a;
+}
+
+.medical-services-grid .service-status.status-no-appointment {
+  color: #000;
+}
+
+.medical-services-grid .service-card a {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .medical-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
