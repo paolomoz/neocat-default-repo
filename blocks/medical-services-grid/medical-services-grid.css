@@ -1,0 +1,88 @@
+.medical-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px;
+  background: transparent;
+}
+
+.medical-services-grid .service-card {
+  background-color: #C5E8C5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+}
+
+.medical-services-grid .service-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.medical-services-grid .service-provider {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.medical-services-grid .service-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medical-services-grid .service-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #1a1a1a;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.medical-services-grid .service-status {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.medical-services-grid .service-status.accepting {
+  color: #2F5233;
+}
+
+.medical-services-grid .service-status.not-accepting {
+  color: #c41e3a;
+}
+
+.medical-services-grid .service-status.neutral {
+  color: #333;
+}
+
+@media (max-width: 1024px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .medical-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
