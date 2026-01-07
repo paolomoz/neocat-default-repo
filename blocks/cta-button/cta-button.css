@@ -1,0 +1,36 @@
+.cta-button {
+  display: inline-block;
+}
+
+.cta-button > div {
+  display: inline-block;
+}
+
+.cta-button .button-wrapper {
+  display: inline-block;
+}
+
+.cta-button .button-wrapper a {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: #1565C0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  border-top: 3px solid #1a237e;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cta-button .button-wrapper a:hover {
+  background-color: #43A047;
+}
+
+.cta-button .button-wrapper a:active {
+  background-color: #388E3C;
+}
