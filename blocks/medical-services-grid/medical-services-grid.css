@@ -1,0 +1,105 @@
+.medical-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px;
+  background-color: #333;
+}
+
+.medical-services-grid .service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 180px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.medical-services-grid .service-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.medical-services-grid .service-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.medical-services-grid .service-provider {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.medical-services-grid .service-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medical-services-grid .service-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #000;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.medical-services-grid .service-status {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.medical-services-grid .service-status.status-accepting {
+  color: #4CAF50;
+}
+
+.medical-services-grid .service-status.status-not-accepting {
+  color: #F44336;
+}
+
+.medical-services-grid .service-status.status-no-appointment {
+  color: #000;
+}
+
+.medical-services-grid .service-card a {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .medical-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
