@@ -1,0 +1,125 @@
+.accessory-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.accessory-cards > div {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  min-height: 400px;
+}
+
+.accessory-cards .card-content {
+  order: 1;
+}
+
+.accessory-cards .card-image {
+  order: 2;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.accessory-cards .card-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.accessory-cards .card-title h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000;
+  margin: 0 0 16px 0;
+}
+
+.accessory-cards .card-cta {
+  margin-top: 8px;
+}
+
+.accessory-cards .card-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.accessory-cards .card-cta a::before {
+  content: '';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.accessory-cards .card-cta a::after {
+  content: '→';
+  position: absolute;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.accessory-cards .card-cta a {
+  position: relative;
+}
+
+.accessory-cards .card-cta a::before {
+  content: '→';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.accessory-cards .card-cta a::after {
+  display: none;
+}
+
+.accessory-cards .card-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .accessory-cards {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+  }
+
+  .accessory-cards > div {
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .accessory-cards .card-title h2 {
+    font-size: 16px;
+  }
+}
