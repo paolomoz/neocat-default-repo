@@ -1,0 +1,106 @@
+.dual-signup-wrapper {
+  background-color: #E8EEF7;
+  padding: 48px 24px;
+}
+
+.dual-signup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dual-signup > div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+}
+
+.dual-signup > div > div:first-child {
+  display: none;
+}
+
+.dual-signup h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #001a3a;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.dual-signup .badge-new {
+  display: inline-block;
+  background-color: #E5B54A;
+  color: #001a3a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.dual-signup p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #001a3a;
+  margin: 0 0 24px 0;
+}
+
+.dual-signup > div > div:nth-child(4) a {
+  display: inline-block;
+  background-color: #003087;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  margin-bottom: 24px;
+}
+
+.dual-signup > div > div:nth-child(4) a:hover {
+  background-color: #002266;
+}
+
+.dual-signup > div > div:nth-child(5) p {
+  margin-bottom: 0;
+}
+
+.dual-signup > div > div:nth-child(5) a {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  color: #003087;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.dual-signup > div > div:nth-child(5) a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .dual-signup {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .dual-signup > div {
+    padding: 0;
+  }
+  
+  .dual-signup > div:first-child {
+    padding-bottom: 32px;
+    border-bottom: 1px solid #c8d4e8;
+  }
+}
