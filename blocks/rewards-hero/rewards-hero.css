@@ -1,0 +1,102 @@
+.rewards-hero {
+  position: relative;
+  background-color: #e8f0f3;
+  padding: 60px 40px;
+  min-height: 350px;
+  overflow: hidden;
+}
+
+.rewards-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 20%, rgba(140, 200, 200, 0.4) 40%, rgba(180, 220, 230, 0.5) 60%, rgba(220, 215, 200, 0.3) 80%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.rewards-hero::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: 5%;
+  width: 45%;
+  height: 140%;
+  background: linear-gradient(180deg, rgba(100, 180, 190, 0.3) 0%, rgba(170, 210, 220, 0.4) 50%, transparent 100%);
+  clip-path: ellipse(70% 50% at 60% 40%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rewards-hero > div {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.rewards-hero > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rewards-hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 400;
+  font-style: italic;
+  color: #003168;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 450px;
+}
+
+.rewards-hero p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.rewards-hero p:last-child {
+  margin-top: 16px;
+}
+
+.rewards-hero a {
+  display: inline-block;
+  background-color: #003168;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+}
+
+.rewards-hero a:hover {
+  background-color: #002550;
+}
+
+@media (max-width: 768px) {
+  .rewards-hero {
+    padding: 40px 24px;
+    min-height: auto;
+  }
+
+  .rewards-hero h1 {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .rewards-hero::before,
+  .rewards-hero::after {
+    opacity: 0.5;
+  }
+}
