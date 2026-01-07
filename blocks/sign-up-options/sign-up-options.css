@@ -1,0 +1,117 @@
+.sign-up-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sign-up-options-column {
+  flex: 1;
+  min-width: 350px;
+}
+
+.sign-up-options-content {
+  padding: 0;
+}
+
+.sign-up-options h3 {
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sign-up-options .new-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sign-up-options p.description {
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 40px 0;
+  max-width: 500px;
+}
+
+.sign-up-options p.cta-wrapper {
+  margin: 0 0 32px 0;
+}
+
+.sign-up-options .cta-button {
+  display: inline-block;
+  background-color: #002d72;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 18px 40px;
+  border-radius: 35px;
+  transition: background-color 0.2s ease;
+}
+
+.sign-up-options .cta-button:hover {
+  background-color: #001d4a;
+}
+
+.sign-up-options p.enroll-text {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+.sign-up-options .text-link {
+  color: #0051a5;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.sign-up-options .text-link:hover {
+  color: #003d7a;
+}
+
+@media (max-width: 768px) {
+  .sign-up-options {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .sign-up-options-column {
+    min-width: 100%;
+  }
+
+  .sign-up-options h3 {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .sign-up-options p.description {
+    margin-bottom: 30px;
+  }
+
+  .sign-up-options .cta-button {
+    display: block;
+    text-align: center;
+    padding: 16px 32px;
+  }
+}
