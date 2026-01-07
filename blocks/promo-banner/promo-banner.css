@@ -1,102 +1,94 @@
 .promo-banner {
-  position: relative;
-  background-color: #f5f7fa;
-  padding: 60px 40px;
-  overflow: hidden;
-  min-height: 280px;
-}
-
-.promo-banner::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 60%;
-  height: 200%;
-  background: linear-gradient(135deg, transparent 30%, rgba(0, 200, 200, 0.15) 50%, rgba(100, 220, 220, 0.2) 70%, rgba(150, 230, 230, 0.25) 100%);
-  border-radius: 50%;
-  transform: rotate(-15deg);
-  pointer-events: none;
-}
-
-.promo-banner::after {
-  content: '';
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  width: 40%;
-  height: 150%;
-  background: linear-gradient(160deg, transparent 20%, rgba(80, 200, 220, 0.1) 40%, rgba(120, 220, 240, 0.15) 60%);
-  border-radius: 50%;
-  transform: rotate(-25deg);
-  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .promo-banner > div {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 0;
 }
 
-.promo-banner > div > div {
+.promo-banner .promo-banner-logo {
+  flex-shrink: 0;
+}
+
+.promo-banner .promo-banner-logo img {
+  width: 140px;
+  height: 140px;
+  max-width: none;
+  object-fit: contain;
+}
+
+.promo-banner .promo-banner-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
+  flex: 1;
 }
 
-.promo-banner h1 {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 42px;
-  font-style: italic;
-  font-weight: 400;
-  color: #1a2b5f;
-  line-height: 1.2;
+.promo-banner .promo-banner-heading {
+  flex-shrink: 0;
+}
+
+.promo-banner .promo-banner-heading h4 {
   margin: 0;
-  max-width: 480px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
 }
 
-.promo-banner p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
+.promo-banner .promo-banner-description {
+  flex-shrink: 0;
+}
+
+.promo-banner .promo-banner-description p {
+  margin: 0;
+  font-size: 18px;
   font-weight: 400;
-  color: #333;
+  color: #333333;
   line-height: 1.5;
-  margin: 0;
 }
 
-.promo-banner p:last-child {
+.promo-banner .promo-banner-cta {
+  flex-shrink: 0;
   margin-top: 8px;
 }
 
-.promo-banner a {
+.promo-banner .promo-banner-cta a {
   display: inline-block;
-  background-color: #1a2b5f;
+  padding: 16px 36px;
+  background-color: #2dd4a8;
   color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
   text-decoration: none;
-  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 600;
   border-radius: 30px;
   transition: background-color 0.2s ease;
 }
 
-.promo-banner a:hover {
-  background-color: #0f1d42;
+.promo-banner .promo-banner-cta a:hover {
+  background-color: #25c49a;
 }
 
 @media (max-width: 768px) {
-  .promo-banner {
-    padding: 40px 24px;
+  .promo-banner > div {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 0;
+    gap: 16px;
   }
 
-  .promo-banner h1 {
-    font-size: 32px;
+  .promo-banner .promo-banner-heading h4 {
+    font-size: 22px;
   }
 
-  .promo-banner::before,
-  .promo-banner::after {
-    opacity: 0.5;
+  .promo-banner .promo-banner-description p {
+    font-size: 16px;
+  }
+
+  .promo-banner .promo-banner-content {
+    align-items: center;
   }
 }
