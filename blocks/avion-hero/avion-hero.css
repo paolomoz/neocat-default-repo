@@ -1,0 +1,105 @@
+.avion-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 420px;
+  padding: 80px 40px 80px 20px;
+  overflow: hidden;
+}
+
+.avion-hero-background {
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  width: 55%;
+  height: 120%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.avion-hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.avion-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  width: 55%;
+  padding-top: 20px;
+}
+
+.avion-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.avion-hero h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 56px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.15;
+  color: #002d72;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.avion-hero h1 em {
+  font-style: italic;
+}
+
+.avion-hero-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin: 12px 0 0 0;
+}
+
+.avion-hero-cta {
+  margin: 20px 0 0 0;
+}
+
+.avion-hero a {
+  display: inline-block;
+  background-color: #002d72;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 18px 40px;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+}
+
+.avion-hero a:hover {
+  background-color: #001f4d;
+}
+
+@media (max-width: 768px) {
+  .avion-hero {
+    padding: 40px 20px;
+    min-height: 300px;
+    flex-direction: column;
+  }
+
+  .avion-hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .avion-hero h1 {
+    font-size: 36px;
+  }
+
+  .avion-hero-background {
+    width: 80%;
+    opacity: 0.6;
+  }
+}
