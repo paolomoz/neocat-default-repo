@@ -1,0 +1,107 @@
+.split-signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.split-signup > div {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.split-signup-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.split-signup-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.split-signup-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+  max-width: 480px;
+}
+
+.split-signup-cta {
+  margin-top: 20px;
+}
+
+.split-signup-cta a {
+  display: inline-block;
+  background-color: #002d72;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.split-signup-cta a:hover {
+  background-color: #001d4a;
+}
+
+.split-signup-secondary {
+  font-size: 15px;
+  color: #333333;
+  margin-top: 16px;
+}
+
+.split-signup-secondary a {
+  color: #002d72;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.split-signup-secondary a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .split-signup {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .split-signup > div {
+    min-width: 100%;
+  }
+
+  .split-signup-cta a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
