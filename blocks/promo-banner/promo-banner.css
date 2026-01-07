@@ -1,102 +1,144 @@
 .promo-banner {
-  position: relative;
-  background-color: #f5f7fa;
-  padding: 60px 40px;
+  background: transparent;
+  padding: 40px 60px;
   overflow: hidden;
-  min-height: 280px;
-}
-
-.promo-banner::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 60%;
-  height: 200%;
-  background: linear-gradient(135deg, transparent 30%, rgba(0, 200, 200, 0.15) 50%, rgba(100, 220, 220, 0.2) 70%, rgba(150, 230, 230, 0.25) 100%);
-  border-radius: 50%;
-  transform: rotate(-15deg);
-  pointer-events: none;
-}
-
-.promo-banner::after {
-  content: '';
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  width: 40%;
-  height: 150%;
-  background: linear-gradient(160deg, transparent 20%, rgba(80, 200, 220, 0.1) 40%, rgba(120, 220, 240, 0.15) 60%);
-  border-radius: 50%;
-  transform: rotate(-25deg);
-  pointer-events: none;
 }
 
 .promo-banner > div {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-}
-
-.promo-banner > div > div {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
 }
 
-.promo-banner h1 {
+.promo-banner > div > div:first-child {
+  flex: 0 1 500px;
+  padding-right: 20px;
+}
+
+.promo-banner > div > div:last-child {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  min-height: 400px;
+  position: relative;
+}
+
+.promo-banner h2 {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 42px;
-  font-style: italic;
   font-weight: 400;
-  color: #1a2b5f;
   line-height: 1.2;
-  margin: 0;
-  max-width: 480px;
+  color: #000;
+  margin: 0 0 20px 0;
 }
 
-.promo-banner p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+.promo-banner h2 .strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: #000;
+}
+
+.promo-banner .description {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  color: #333;
   line-height: 1.5;
-  margin: 0;
+  color: #666;
+  margin: 0 0 16px 0;
 }
 
-.promo-banner p:last-child {
-  margin-top: 8px;
+.promo-banner .offer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+  margin: 0 0 24px 0;
 }
 
-.promo-banner a {
+.promo-banner .cta-button {
   display: inline-block;
-  background-color: #1a2b5f;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #8bc34a;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
-  padding: 14px 32px;
-  border-radius: 30px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  border: none;
   transition: background-color 0.2s ease;
 }
 
-.promo-banner a:hover {
-  background-color: #0f1d42;
+.promo-banner .cta-button:hover {
+  background-color: #7cb342;
 }
 
-@media (max-width: 768px) {
-  .promo-banner {
-    padding: 40px 24px;
+.promo-banner .product-img {
+  max-width: none;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.promo-banner .product-img-1 {
+  max-height: 180px;
+  align-self: flex-start;
+}
+
+.promo-banner .product-img-2 {
+  max-height: 160px;
+  align-self: center;
+}
+
+.promo-banner .product-img-3 {
+  max-height: 350px;
+  align-self: stretch;
+}
+
+.promo-banner .product-img-4 {
+  max-height: 380px;
+  align-self: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .promo-banner > div {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .promo-banner h1 {
+  .promo-banner > div > div:first-child {
+    flex: 1;
+    padding-right: 0;
+  }
+
+  .promo-banner > div > div:last-child {
+    min-height: 300px;
+    flex-wrap: wrap;
+  }
+
+  .promo-banner h2 {
     font-size: 32px;
   }
+}
 
-  .promo-banner::before,
-  .promo-banner::after {
-    opacity: 0.5;
+@media (max-width: 600px) {
+  .promo-banner {
+    padding: 30px 20px;
+  }
+
+  .promo-banner h2 {
+    font-size: 26px;
+  }
+
+  .promo-banner > div > div:last-child {
+    gap: 10px;
+  }
+
+  .promo-banner .product-img {
+    max-height: 120px !important;
   }
 }
