@@ -1,0 +1,105 @@
+.medical-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 0;
+}
+
+.medical-services-grid .service-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 180px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: none;
+}
+
+.medical-services-grid .service-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.medical-services-grid .service-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px 0;
+  line-height: 1.25;
+}
+
+.medical-services-grid .service-provider {
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+  margin: 0 0 24px 0;
+}
+
+.medical-services-grid .service-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medical-services-grid .service-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #222;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.medical-services-grid .service-status {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.medical-services-grid .service-status.status-accepting {
+  color: #2cb34a;
+}
+
+.medical-services-grid .service-status.status-not-accepting {
+  color: #e74c3c;
+}
+
+.medical-services-grid .service-status.status-no-appointment {
+  color: #333;
+}
+
+.medical-services-grid .service-card a {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .medical-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
