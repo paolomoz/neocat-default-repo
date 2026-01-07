@@ -1,0 +1,108 @@
+.footer-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  padding: 48px 60px;
+  background: transparent;
+  border-top: 4px solid #1a3a5c;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-navigation > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-navigation > div:first-child > div:first-child,
+.footer-navigation > div:nth-child(2) > div:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2b4a;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+.footer-navigation > div:first-child > div:not(:first-child),
+.footer-navigation > div:nth-child(2) > div:not(:first-child) {
+  margin-bottom: 16px;
+}
+
+.footer-navigation > div:first-child a,
+.footer-navigation > div:nth-child(2) a {
+  color: #1a2b4a;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: sans-serif;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  display: inline;
+}
+
+.footer-navigation > div:first-child a:hover,
+.footer-navigation > div:nth-child(2) a:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation > div:nth-child(3) {
+  align-items: flex-end;
+}
+
+.footer-navigation .social-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.footer-navigation .social-icons a {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  display: inline-flex;
+}
+
+.footer-navigation .social-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.footer-navigation .app-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.footer-navigation .app-badges a {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  display: inline-flex;
+}
+
+.footer-navigation .app-badges img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .footer-navigation {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 32px 24px;
+  }
+  
+  .footer-navigation > div:nth-child(3) {
+    align-items: flex-start;
+  }
+  
+  .footer-navigation .app-badges {
+    align-items: flex-start;
+  }
+}
