@@ -1,0 +1,109 @@
+.tabbed-hero-wrapper {
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+}
+
+.tabbed-hero {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.tabbed-hero .tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 20px 0;
+  background-color: #000;
+}
+
+.tabbed-hero .tab-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 60px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tabbed-hero .tab-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tabbed-hero .tab-btn.active {
+  color: #fff;
+}
+
+.tabbed-hero .tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+}
+
+.tabbed-hero .tab-panel {
+  display: none;
+  background-color: #000;
+}
+
+.tabbed-hero .tab-panel.active {
+  display: block;
+}
+
+.tabbed-hero .panel-heading {
+  font-family: Syncopate, sans-serif;
+  font-size: clamp(40px, 7vw, 90px);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  padding: 40px 20px 50px;
+  margin: 0;
+}
+
+.tabbed-hero .panel-image {
+  width: calc(100% - 80px);
+  margin: 0 40px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tabbed-hero .panel-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.tabbed-hero .tab-item {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .tabbed-hero .tab-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .tabbed-hero .panel-heading {
+    font-size: 32px;
+    padding: 30px 15px 40px;
+  }
+
+  .tabbed-hero .panel-image {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    border-radius: 12px;
+  }
+}
