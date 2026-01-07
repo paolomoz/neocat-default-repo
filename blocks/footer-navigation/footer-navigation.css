@@ -1,0 +1,124 @@
+.footer-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 48px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-navigation > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-navigation > div:last-child {
+  flex: 0 0 auto;
+  min-width: 200px;
+}
+
+.footer-navigation h3 {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+.footer-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-navigation ul li {
+  margin-bottom: 16px;
+}
+
+.footer-navigation ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-navigation ul li a {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline;
+}
+
+.footer-navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation .social-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.footer-navigation .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.footer-navigation .social-icons img {
+  width: 28px;
+  height: 28px;
+  max-width: none;
+}
+
+.footer-navigation .app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-navigation .app-buttons a {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.footer-navigation .app-buttons img {
+  height: 40px;
+  width: auto;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .footer-navigation {
+    flex-direction: column;
+    padding: 32px 20px;
+    gap: 32px;
+  }
+
+  .footer-navigation > div {
+    flex: none;
+    width: 100%;
+  }
+
+  .footer-navigation > div:last-child {
+    align-items: flex-start;
+  }
+
+  .footer-navigation .social-icons {
+    justify-content: flex-start;
+  }
+
+  .footer-navigation .app-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
