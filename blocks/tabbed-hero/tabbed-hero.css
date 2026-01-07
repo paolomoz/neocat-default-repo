@@ -1,0 +1,138 @@
+.tabbed-hero {
+  display: block;
+  width: 100%;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+.tabbed-hero-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tabbed-hero-header {
+  background-color: rgb(0, 0, 0);
+  padding: 0 20px 60px;
+}
+
+.tabbed-hero-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.tabbed-hero-tab {
+  flex: 1;
+  text-align: center;
+  padding: 16px 40px 16px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border: none;
+  background: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tabbed-hero-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tabbed-hero-tab.active {
+  color: rgb(255, 255, 255);
+}
+
+.tabbed-hero-tab.active::after {
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+}
+
+.tabbed-hero-tab:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tabbed-hero-heading {
+  font-family: Syncopate, sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  margin: 0 auto;
+  max-width: 900px;
+  text-transform: uppercase;
+}
+
+.tabbed-hero-images {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tabbed-hero-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tabbed-hero-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.tabbed-hero-panel {
+  display: none;
+}
+
+.tabbed-hero-panel.active {
+  display: block;
+}
+
+/* Hide original rows */
+.tabbed-hero > div {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .tabbed-hero-heading {
+    font-size: 56px;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+  }
+  
+  .tabbed-hero-tab {
+    padding: 12px 20px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabbed-hero-heading {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -0.3px;
+  }
+  
+  .tabbed-hero-header {
+    padding: 0 16px 40px;
+  }
+  
+  .tabbed-hero-tabs {
+    margin-bottom: 40px;
+  }
+  
+  .tabbed-hero-tab {
+    padding: 10px 12px 14px;
+    font-size: 13px;
+  }
+}
