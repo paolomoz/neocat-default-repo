@@ -1,0 +1,148 @@
+.signup-options {
+  background-color: #d4e8d4;
+  padding: 60px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.signup-options > div:first-child {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.signup-options > div:first-child h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #1a2a3a;
+  margin: 0 0 20px;
+}
+
+.signup-options > div:first-child p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1a2a3a;
+  margin: 0;
+}
+
+.signup-options > div:nth-child(2) {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.signup-options > div:nth-child(2) > div {
+  flex: 1;
+  padding: 20px 40px;
+}
+
+.signup-options > div:nth-child(2) > div:first-child {
+  border-right: 1px solid #b0c4b0;
+}
+
+.signup-options > div:nth-child(2) h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a2a3a;
+  margin: 0 0 20px;
+}
+
+.signup-options > div:nth-child(2) p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a2a3a;
+  margin: 0 0 20px;
+}
+
+.signup-options .new-badge {
+  display: inline-block;
+  background-color: #e6c84a;
+  color: #1a2a3a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.signup-options .button-primary {
+  display: inline-block;
+  background-color: #0a4a5c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.signup-options .button-primary:hover {
+  background-color: #083a4a;
+}
+
+.signup-options .text-link {
+  color: #0a4a5c;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.signup-options .text-link:hover {
+  color: #083a4a;
+}
+
+.signup-options > div:nth-child(3) {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #b0c4b0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup-options .eligibility-link {
+  margin: 0;
+}
+
+.signup-options .eligibility-link a {
+  color: #0a4a5c;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.signup-options .tooltip-icon {
+  display: inline-block;
+  color: #0a4a5c;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .signup-options > div:nth-child(2) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .signup-options > div:nth-child(2) > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid #b0c4b0;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+
+  .signup-options > div:first-child h2 {
+    font-size: 36px;
+  }
+}
