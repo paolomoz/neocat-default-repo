@@ -1,0 +1,96 @@
+.medical-specialties {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+  background-color: #333;
+}
+
+.medical-specialties .specialty-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 180px;
+}
+
+.medical-specialties .specialty-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.medical-specialties .specialty-provider {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+.medical-specialties .specialty-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.medical-specialties .specialty-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.medical-specialties .specialty-status {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.medical-specialties .specialty-status.accepting {
+  color: #4CAF50;
+}
+
+.medical-specialties .specialty-status.not-accepting {
+  color: #F44336;
+}
+
+.medical-specialties .specialty-status.no-appointment {
+  color: #000;
+}
+
+.medical-specialties .specialty-link {
+  display: none;
+}
+
+.medical-specialties .specialty-link a {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #4CAF50;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .medical-specialties {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-specialties {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .medical-specialties {
+    grid-template-columns: 1fr;
+  }
+}
