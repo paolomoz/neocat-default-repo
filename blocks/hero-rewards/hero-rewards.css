@@ -1,0 +1,114 @@
+.hero-rewards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  padding: 60px 80px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.hero-rewards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(200, 230, 240, 0.6) 0%, rgba(180, 220, 235, 0.8) 30%, rgba(140, 210, 230, 0.6) 60%, rgba(200, 235, 245, 0.4) 100%);
+  border-radius: 0 0 0 60% / 0 0 0 40%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-rewards::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 35%;
+  height: 60%;
+  background: linear-gradient(180deg, rgba(160, 220, 235, 0.5) 0%, rgba(180, 230, 240, 0.3) 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-rewards > div {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero-rewards > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-rewards h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #0a2540;
+  margin: 0;
+}
+
+.hero-rewards p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a5568;
+  margin: 0;
+}
+
+.hero-rewards p:last-child {
+  margin-top: 12px;
+}
+
+.hero-rewards a {
+  display: inline-block;
+  background-color: #0a2540;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-rewards a:hover {
+  background-color: #0d3156;
+}
+
+@media (max-width: 768px) {
+  .hero-rewards {
+    padding: 40px 24px;
+    min-height: 400px;
+  }
+
+  .hero-rewards::before {
+    width: 100%;
+    height: 50%;
+    top: auto;
+    bottom: 0;
+    border-radius: 60% 60% 0 0 / 40% 40% 0 0;
+  }
+
+  .hero-rewards::after {
+    display: none;
+  }
+
+  .hero-rewards h1 {
+    font-size: 32px;
+  }
+
+  .hero-rewards > div {
+    max-width: 100%;
+  }
+}
