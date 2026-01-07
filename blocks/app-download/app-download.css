@@ -1,0 +1,145 @@
+.app-download {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+.app-download > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.app-download > div > div:first-child {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.app-download > div > div:first-child::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #0051a5 0%, #003d7a 50%, #002855 100%);
+  border-radius: 50% 50% 50% 20%;
+  z-index: -2;
+}
+
+.app-download > div > div:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: #f5a623;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.app-download > div > div:first-child img {
+  display: block;
+  max-width: 280px;
+  width: auto;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.app-download > div > div:last-child {
+  max-width: 500px;
+}
+
+.app-download h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.app-download p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 32px 0;
+}
+
+.app-download h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+}
+
+.app-download .app-store-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-download .app-store-buttons a {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.app-download .app-store-buttons a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.app-download .app-store-buttons img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .app-download > div {
+    flex-direction: column;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .app-download > div > div:first-child::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .app-download > div > div:first-child::after {
+    width: 150px;
+    height: 150px;
+    bottom: -10px;
+    left: -20px;
+  }
+
+  .app-download > div > div:first-child img {
+    max-width: 220px;
+  }
+
+  .app-download h2 {
+    font-size: 32px;
+  }
+
+  .app-download .app-store-buttons {
+    justify-content: center;
+  }
+}
