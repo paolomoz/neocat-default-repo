@@ -1,0 +1,39 @@
+.section-heading {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-heading > div {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-heading > div > div {
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-family: 'Adobe Clean Serif', Georgia, 'Times New Roman', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .section-heading h2 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-heading h2 {
+    font-size: 48px;
+  }
+}
