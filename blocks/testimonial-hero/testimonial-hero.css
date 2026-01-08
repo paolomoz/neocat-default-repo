@@ -1,0 +1,133 @@
+.testimonial-hero {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.testimonial-hero > div {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 100px;
+  box-sizing: border-box;
+}
+
+.testimonial-hero > div > div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.testimonial-hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimonial-hero > div > div:first-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(60, 50, 40, 0.85) 0%, rgba(60, 50, 40, 0.6) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.testimonial-hero > div > div:nth-child(2) {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.testimonial-hero > div > div:nth-child(2) img {
+  max-width: 280px;
+  width: auto;
+  height: auto;
+}
+
+.testimonial-hero > div > div:nth-child(3) {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+.testimonial-hero > div > div:nth-child(3)::before {
+  content: '"';
+}
+
+.testimonial-hero > div > div:nth-child(3)::after {
+  content: '"';
+}
+
+.testimonial-hero > div > div:nth-child(4) {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.testimonial-hero > div > div:nth-child(5) {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.testimonial-hero > div > div:nth-child(6) {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-hero > div > div:nth-child(6) a {
+  display: inline-block;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.testimonial-hero > div > div:nth-child(6) a:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .testimonial-hero > div {
+    padding: 40px 24px;
+    min-height: 450px;
+  }
+
+  .testimonial-hero > div > div:first-child::after {
+    background: linear-gradient(to bottom, rgba(60, 50, 40, 0.9) 0%, rgba(60, 50, 40, 0.7) 100%);
+  }
+
+  .testimonial-hero > div > div:nth-child(2) img {
+    max-width: 220px;
+  }
+
+  .testimonial-hero > div > div:nth-child(3) {
+    font-size: 16px;
+  }
+}
