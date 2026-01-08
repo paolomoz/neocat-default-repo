@@ -1,0 +1,108 @@
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1425px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Gotham-Medium', sans-serif;
+  font-size: 12px;
+  line-height: 15.6px;
+  color: rgb(51, 51, 51);
+}
+
+.news-cards > div {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+}
+
+.news-cards .card-image {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.news-cards .card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-cards .card-title h2 {
+  font-family: 'gotham-light', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  padding: 26px 0 12px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.news-cards .card-date {
+  font-family: 'gotham-medium', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin-bottom: 16px;
+}
+
+.news-cards .card-description {
+  font-family: 'gotham-medium', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin-bottom: 20px;
+}
+
+.news-cards .card-description p {
+  margin: 0;
+}
+
+.news-cards .card-cta {
+  margin-top: auto;
+}
+
+.news-cards .card-cta a {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Gotham-Book', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 20.8px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.news-cards .card-cta a::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2361126b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.news-cards .card-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .news-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .news-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
