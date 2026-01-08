@@ -1,0 +1,126 @@
+.promo-cards {
+  display: flex;
+  gap: 24px;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.promo-cards > div {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-cards > div:nth-child(1) {
+  background: linear-gradient(135deg, #1a1a3e 0%, #2d1b4e 50%, #1a2a4a 100%);
+}
+
+.promo-cards > div:nth-child(2) {
+  background: linear-gradient(135deg, #0f1629 0%, #1a1a3e 50%, #2d1b4e 100%);
+}
+
+.promo-cards > div:nth-child(3) {
+  background: #000000;
+}
+
+.promo-cards .promo-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.promo-cards .promo-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.promo-cards > div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.promo-cards .promo-card-eyebrow,
+.promo-cards .promo-card-heading,
+.promo-cards .promo-card-description,
+.promo-cards .promo-card-cta {
+  position: relative;
+  z-index: 2;
+  padding: 0 28px;
+}
+
+.promo-cards .promo-card-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding-top: 28px;
+  margin-bottom: 12px;
+}
+
+.promo-cards .promo-card-heading h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.promo-cards .promo-card-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.promo-cards .promo-card-cta {
+  padding-bottom: 28px;
+  margin-top: auto;
+}
+
+.promo-cards .promo-card-cta a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.promo-cards .promo-card-cta a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 900px) {
+  .promo-cards {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .promo-cards > div {
+    min-height: 350px;
+  }
+}
