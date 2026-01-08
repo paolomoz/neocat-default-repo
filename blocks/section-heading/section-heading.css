@@ -1,0 +1,31 @@
+.section-heading {
+  width: 100%;
+  padding: 60px 24px;
+  box-sizing: border-box;
+}
+
+.section-heading > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-family: 'Adobe Clean', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    padding: 40px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+}
