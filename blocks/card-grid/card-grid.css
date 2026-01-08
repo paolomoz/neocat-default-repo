@@ -1,0 +1,87 @@
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  padding: 40px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card-grid > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 280px;
+  background-color: #fff;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.card-grid > div > div:first-child {
+  order: 3;
+}
+
+.card-grid > div > div:nth-child(2) {
+  order: 1;
+  padding: 30px 30px 0 30px;
+}
+
+.card-grid > div > div:nth-child(3) {
+  order: 2;
+  padding: 0 30px 20px 30px;
+}
+
+.card-grid > div > div:first-child img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.card-grid h3 {
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(48, 46, 44);
+  line-height: 50.4px;
+  margin: 0 0 18px 0;
+  text-align: start;
+}
+
+.card-grid p {
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(84, 84, 84);
+  margin: 0;
+  text-align: start;
+}
+
+@media (max-width: 1024px) {
+  .card-grid > div {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card-grid > div {
+    flex: 1 1 100%;
+  }
+  
+  .card-grid h3 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  .card-grid p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
