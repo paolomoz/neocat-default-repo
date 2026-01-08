@@ -1,0 +1,116 @@
+.feature-cards {
+  display: flex;
+  gap: 24px;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-cards > div {
+  flex: 1;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-cards .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.feature-cards .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-cards .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.feature-cards .card-content {
+  position: relative;
+  z-index: 2;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.feature-cards .card-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.feature-cards .card-heading {
+  margin: 0 0 16px 0;
+}
+
+.feature-cards .card-heading h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0;
+}
+
+.feature-cards .card-description {
+  flex: 1;
+}
+
+.feature-cards .card-description p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+}
+
+.feature-cards .card-cta {
+  margin-top: 24px;
+}
+
+.feature-cards .card-cta a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.feature-cards .card-cta a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 900px) {
+  .feature-cards {
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+
+  .feature-cards > div {
+    min-height: 360px;
+  }
+}
