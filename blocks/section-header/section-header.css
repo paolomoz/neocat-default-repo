@@ -1,0 +1,29 @@
+.section-header {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-header > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header h2 {
+  font-family: 'Adobe Clean Serif', Georgia, 'Times New Roman', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    padding: 40px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+}
