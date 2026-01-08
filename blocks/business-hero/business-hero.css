@@ -1,0 +1,133 @@
+.business-hero {
+  background-color: #000000;
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.business-hero > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: 420px;
+}
+
+.business-hero > div > div:first-child {
+  flex: 0 0 50%;
+  max-width: 550px;
+  padding-left: 60px;
+  z-index: 2;
+}
+
+.business-hero > div > div:last-child {
+  flex: 0 0 45%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+}
+
+.business-hero h2 {
+  color: #ffffff;
+  font-family: "Adobe Clean Serif", Georgia, serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 32px 0;
+  font-style: italic;
+}
+
+.business-hero p {
+  margin: 0;
+}
+
+.business-hero a {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  font-family: "Adobe Clean", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.business-hero a:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.business-hero > div > div:last-child::before {
+  content: '';
+  position: absolute;
+  background-color: #eb1000;
+  width: 320px;
+  height: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.business-hero > div > div:last-child img {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .business-hero > div > div:first-child {
+    padding-left: 20px;
+    flex: 0 0 55%;
+  }
+  
+  .business-hero > div > div:last-child {
+    flex: 0 0 40%;
+  }
+  
+  .business-hero h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-hero > div {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .business-hero > div > div:first-child {
+    padding-left: 0;
+    max-width: 100%;
+    flex: none;
+    margin-bottom: 40px;
+  }
+  
+  .business-hero > div > div:last-child {
+    flex: none;
+    justify-content: center;
+  }
+  
+  .business-hero h2 {
+    font-size: 28px;
+  }
+  
+  .business-hero > div > div:last-child::before {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .business-hero > div > div:last-child img {
+    max-width: 240px;
+  }
+}
