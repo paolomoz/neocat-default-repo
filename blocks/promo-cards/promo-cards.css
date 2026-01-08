@@ -1,0 +1,144 @@
+.promo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.promo-cards > div {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-cards > div:nth-child(1) {
+  background: linear-gradient(180deg, rgba(30, 50, 100, 0.9) 0%, rgba(20, 30, 60, 0.95) 100%);
+}
+
+.promo-cards > div:nth-child(2) {
+  background: linear-gradient(180deg, rgba(30, 40, 80, 0.9) 0%, rgba(20, 25, 50, 0.95) 100%);
+}
+
+.promo-cards > div:nth-child(3) {
+  background: #000000;
+}
+
+.promo-cards > div > div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.promo-cards > div > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.promo-cards > div:nth-child(3) > div:first-child {
+  position: absolute;
+  bottom: 20px;
+  left: auto;
+  right: auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.promo-cards > div:nth-child(3) > div:first-child img {
+  width: 120px;
+  height: auto;
+  opacity: 1;
+  object-fit: contain;
+}
+
+.promo-cards > div > div:nth-child(2),
+.promo-cards > div > div:nth-child(3),
+.promo-cards > div > div:nth-child(4),
+.promo-cards > div > div:nth-child(5) {
+  position: relative;
+  z-index: 1;
+  padding: 0 28px;
+}
+
+.promo-cards > div > div:nth-child(2) {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding-top: 28px;
+  margin-bottom: 12px;
+}
+
+.promo-cards > div > div:nth-child(3) h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.promo-cards > div > div:nth-child(4) {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.promo-cards > div > div:nth-child(5) {
+  margin-top: auto;
+  padding-bottom: 28px;
+}
+
+.promo-cards > div > div:nth-child(5) a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.promo-cards > div > div:nth-child(5) a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .promo-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+  
+  .promo-cards > div {
+    min-height: 350px;
+  }
+  
+  .promo-cards > div > div:nth-child(3) h2 {
+    font-size: 22px;
+  }
+}
