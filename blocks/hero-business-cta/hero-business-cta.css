@@ -1,0 +1,115 @@
+.hero-business-cta {
+  position: relative;
+  display: flex;
+  min-height: 420px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hero-business-cta > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-business-cta > div > div:first-child {
+  flex: 1;
+  padding: 60px 40px 60px 80px;
+  z-index: 2;
+  max-width: 50%;
+}
+
+.hero-business-cta > div > div:last-child {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0;
+}
+
+.hero-business-cta > div > div:last-child::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background-color: #eb1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.hero-business-cta > div > div:last-child img {
+  position: relative;
+  z-index: 1;
+  max-width: 380px;
+  width: auto;
+  height: auto;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.hero-business-cta h2 {
+  font-family: 'Adobe Clean Serif', Georgia, serif;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 30px 0;
+}
+
+.hero-business-cta p {
+  margin: 0;
+}
+
+.hero-business-cta p a {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Adobe Clean', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-business-cta p a:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .hero-business-cta > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-business-cta > div > div:first-child {
+    max-width: 100%;
+    padding: 40px 30px;
+  }
+  
+  .hero-business-cta > div > div:last-child {
+    padding: 0 20px 40px;
+    justify-content: center;
+  }
+  
+  .hero-business-cta h2 {
+    font-size: 28px;
+  }
+  
+  .hero-business-cta > div > div:last-child::before {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .hero-business-cta > div > div:last-child img {
+    max-width: 280px;
+    max-height: 280px;
+  }
+}
