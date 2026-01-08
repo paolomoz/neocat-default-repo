@@ -1,0 +1,152 @@
+.industry-expertise {
+  position: relative;
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  padding: 60px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.industry-expertise .header-row {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.industry-expertise .header-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(84, 84, 84);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.industry-expertise .collage-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+  max-width: 750px;
+  margin-left: auto;
+}
+
+.industry-expertise .collage-row-top {
+  display: contents;
+}
+
+.industry-expertise .collage-row-bottom {
+  display: contents;
+}
+
+.industry-expertise .collage-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.industry-expertise .collage-image-large {
+  grid-column: span 2;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.industry-expertise .content-card {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  padding: 40px;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.industry-expertise .card-heading {
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50.4px;
+  color: rgb(48, 46, 44);
+  margin: 0 0 18px 0;
+}
+
+.industry-expertise .card-text {
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(84, 84, 84);
+  margin: 0 0 24px 0;
+}
+
+.industry-expertise .card-cta a {
+  display: inline-block;
+  background-color: rgb(249, 105, 21);
+  color: #ffffff;
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.industry-expertise .card-cta a:hover {
+  background-color: rgb(220, 90, 15);
+}
+
+@media (max-width: 1024px) {
+  .industry-expertise .collage-wrapper {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  
+  .industry-expertise .content-card {
+    position: relative;
+    top: auto;
+    transform: none;
+    max-width: 100%;
+    margin-top: -60px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-expertise {
+    padding: 40px 16px;
+  }
+  
+  .industry-expertise .collage-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .industry-expertise .collage-image {
+    height: 140px;
+  }
+  
+  .industry-expertise .collage-image-large {
+    grid-column: span 1;
+    height: 140px;
+  }
+  
+  .industry-expertise .content-card {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24px;
+  }
+  
+  .industry-expertise .card-heading {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  .industry-expertise .card-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
