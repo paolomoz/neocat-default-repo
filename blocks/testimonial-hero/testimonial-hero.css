@@ -1,0 +1,134 @@
+.testimonial-hero {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.testimonial-hero > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.testimonial-hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.testimonial-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.testimonial-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.testimonial-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.testimonial-hero-logo {
+  margin-bottom: 24px;
+}
+
+.testimonial-hero-logo img {
+  max-width: 320px;
+  width: auto;
+  height: auto;
+}
+
+.testimonial-hero-quote {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-style: normal;
+}
+
+.testimonial-hero-quote::before {
+  content: '"';
+}
+
+.testimonial-hero-quote::after {
+  content: '"';
+}
+
+.testimonial-hero-name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.testimonial-hero-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.testimonial-hero-cta a {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 24px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.testimonial-hero-cta a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .testimonial-hero > div {
+    padding: 40px 24px;
+    min-height: 350px;
+  }
+
+  .testimonial-hero-logo img {
+    max-width: 240px;
+  }
+
+  .testimonial-hero-quote {
+    font-size: 16px;
+  }
+
+  .testimonial-hero-content {
+    max-width: 100%;
+  }
+}
