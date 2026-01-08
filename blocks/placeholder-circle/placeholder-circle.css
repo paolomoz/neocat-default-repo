@@ -1,0 +1,21 @@
+.placeholder-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: STILLType, Verdana, Arial, sans-serif;
+}
+
+.placeholder-circle > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-circle .circle-container {
+  width: 120px;
+  height: 120px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
