@@ -1,0 +1,137 @@
+.promo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.promo-cards > div {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-cards .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.promo-cards .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-cards .card-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+}
+
+.promo-cards .card-content {
+  position: relative;
+  z-index: 1;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #ffffff;
+}
+
+.promo-cards .card-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.promo-cards > div:nth-child(1) .card-eyebrow {
+  color: #5CAAFF;
+}
+
+.promo-cards > div:nth-child(2) .card-eyebrow {
+  color: #4DD9D9;
+}
+
+.promo-cards > div:nth-child(3) .card-eyebrow {
+  color: #FFFFFF;
+}
+
+.promo-cards .card-heading h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+}
+
+.promo-cards .card-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.promo-cards .card-description p {
+  margin: 0;
+}
+
+.promo-cards .card-cta {
+  margin-top: auto;
+}
+
+.promo-cards .card-cta a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.promo-cards .card-cta a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .promo-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-cards {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .promo-cards > div {
+    min-height: 350px;
+  }
+  
+  .promo-cards .card-heading h2 {
+    font-size: 22px;
+  }
+}
