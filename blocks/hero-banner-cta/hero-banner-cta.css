@@ -1,0 +1,98 @@
+.hero-banner-cta {
+  background-color: #000000;
+  padding: 60px 40px;
+  overflow: hidden;
+}
+
+.hero-banner-cta > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.hero-banner-cta > div > div:first-child {
+  flex: 0 1 50%;
+  padding-right: 40px;
+}
+
+.hero-banner-cta > div > div:last-child {
+  flex: 0 1 45%;
+  position: relative;
+}
+
+.hero-banner-cta > div > div:last-child::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: 20px;
+  background-color: #eb1000;
+  z-index: 0;
+}
+
+.hero-banner-cta h2 {
+  font-family: "Adobe Clean Serif", Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 30px 0;
+}
+
+.hero-banner-cta > div > div:last-child img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-banner-cta p {
+  margin: 0;
+}
+
+.hero-banner-cta p a {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 24px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-banner-cta p a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 900px) {
+  .hero-banner-cta > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-banner-cta > div > div:first-child {
+    flex: 1 1 100%;
+    padding-right: 0;
+    order: 1;
+  }
+
+  .hero-banner-cta > div > div:last-child {
+    flex: 1 1 100%;
+    order: 2;
+    max-width: 400px;
+  }
+
+  .hero-banner-cta h2 {
+    font-size: 32px;
+  }
+}
