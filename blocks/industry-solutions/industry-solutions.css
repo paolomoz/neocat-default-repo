@@ -1,0 +1,178 @@
+.industry-solutions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0;
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  background: transparent;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: 700px;
+}
+
+.industry-solutions > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 40px;
+  grid-row: 1 / 5;
+}
+
+.industry-solutions > div:first-child > div:first-child {
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(48, 46, 44);
+  line-height: 50.4px;
+  margin-bottom: 18px;
+  max-width: 100%;
+}
+
+.industry-solutions > div:first-child > div:nth-child(2) {
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(84, 84, 84);
+  margin-bottom: 30px;
+}
+
+.industry-solutions > div:first-child > div:nth-child(3) a {
+  display: inline-block;
+  background-color: rgb(249, 105, 21);
+  color: #fff;
+  font-family: STILLType, Verdana, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+}
+
+.industry-solutions > div:first-child > div:nth-child(3) a:hover {
+  background-color: rgb(220, 90, 15);
+}
+
+.industry-solutions > div:not(:first-child) {
+  display: contents;
+}
+
+.industry-solutions > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  grid-column: 2;
+}
+
+.industry-solutions > div:nth-child(3) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  grid-column: 2;
+  margin-top: 8px;
+}
+
+.industry-solutions > div:nth-child(4) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  grid-column: 2;
+  margin-top: 8px;
+}
+
+.industry-solutions > div:not(:first-child) > div {
+  overflow: hidden;
+  position: relative;
+}
+
+.industry-solutions > div:not(:first-child) > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 150px;
+}
+
+.industry-solutions > div:nth-child(2) > div:nth-child(1) img,
+.industry-solutions > div:nth-child(3) > div:nth-child(2) img,
+.industry-solutions > div:nth-child(4) > div:nth-child(3) img {
+  filter: grayscale(100%);
+}
+
+.industry-solutions > div:nth-child(2) > div {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.industry-solutions > div:nth-child(2) > div:first-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.industry-solutions > div:nth-child(3) > div:first-child {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.industry-solutions > div:nth-child(3) > div:last-child {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.industry-solutions > div:nth-child(4) > div {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.industry-solutions > div:nth-child(4) > div:first-child {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.industry-solutions > div:nth-child(4) > div:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+@media (max-width: 1024px) {
+  .industry-solutions {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  
+  .industry-solutions > div:first-child {
+    grid-row: auto;
+    padding-right: 0;
+    padding-bottom: 40px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .industry-solutions > div:nth-child(2),
+  .industry-solutions > div:nth-child(3),
+  .industry-solutions > div:nth-child(4) {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-solutions > div:first-child > div:first-child {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  .industry-solutions > div:first-child > div:nth-child(2) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .industry-solutions > div:nth-child(2),
+  .industry-solutions > div:nth-child(4) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .industry-solutions > div:nth-child(2) > div:nth-child(3) {
+    display: none;
+  }
+  
+  .industry-solutions > div:nth-child(4) > div:nth-child(3) {
+    display: none;
+  }
+}
