@@ -1,0 +1,71 @@
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 40px 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-strip > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-strip .logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-strip .logo-item img {
+  max-width: none;
+  width: auto;
+  height: auto;
+  max-height: 48px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.logo-strip .logo-item:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 1024px) {
+  .logo-strip {
+    gap: 32px;
+    padding: 32px 20px;
+  }
+  
+  .logo-strip .logo-item img {
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-strip {
+    gap: 24px;
+    padding: 24px 16px;
+  }
+  
+  .logo-strip .logo-item img {
+    max-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-strip {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .logo-strip .logo-item img {
+    max-height: 32px;
+  }
+}
