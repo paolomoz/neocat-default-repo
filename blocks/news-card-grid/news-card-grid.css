@@ -1,0 +1,76 @@
+.news-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Gotham-Medium, Arial, sans-serif;
+}
+
+.news-card-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card-grid .card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-card-grid .card-title h2 {
+  font-family: gotham-light, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  margin: 16px 0 8px 0;
+  padding: 0;
+}
+
+.news-card-grid .card-date p {
+  font-family: gotham-medium, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin: 0 0 12px 0;
+}
+
+.news-card-grid .card-excerpt p {
+  font-family: gotham-medium, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin: 0 0 16px 0;
+}
+
+.news-card-grid .card-link a {
+  font-family: gotham-light, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.news-card-grid .card-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .news-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .news-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
