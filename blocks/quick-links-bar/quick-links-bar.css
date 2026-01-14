@@ -1,0 +1,82 @@
+.quick-links-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 30px 20px;
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+  max-width: 100%;
+}
+
+.quick-links-bar > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.quick-links-bar > div > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-links-bar > div > div:first-child img {
+  width: 27px;
+  height: 27px;
+  display: block;
+  object-fit: contain;
+}
+
+.quick-links-bar > div > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.quick-links-bar > div > div:last-child a {
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15.6px;
+  color: rgb(97, 18, 107);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.quick-links-bar > div > div:last-child a::after {
+  content: '→';
+  font-size: 14px;
+  color: rgb(97, 18, 107);
+}
+
+.quick-links-bar > div > div:last-child a:hover {
+  color: rgb(51, 51, 51);
+}
+
+.quick-links-bar > div > div:last-child a:hover::after {
+  color: rgb(51, 51, 51);
+}
+
+@media (max-width: 768px) {
+  .quick-links-bar {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 16px;
+  }
+
+  .quick-links-bar > div {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
