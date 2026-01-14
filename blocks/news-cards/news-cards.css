@@ -1,0 +1,100 @@
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Gotham-Medium', 'Gotham', Arial, sans-serif;
+}
+
+.news-cards > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-cards > div > div:first-child {
+  margin-bottom: 0;
+}
+
+.news-cards > div > div:first-child img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-cards h2 {
+  font-family: 'gotham-light', 'Gotham', Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  margin: 0;
+  padding: 26px 0 12px;
+}
+
+.news-cards .date {
+  font-family: 'gotham-medium', 'Gotham', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin: 0 0 16px 0;
+}
+
+.news-cards p {
+  font-family: 'gotham-medium', 'Gotham', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.news-cards a {
+  font-family: 'Gotham-Book', 'Gotham', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: auto;
+}
+
+.news-cards a::after {
+  content: '→';
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.news-cards a:hover {
+  text-decoration: underline;
+}
+
+.news-cards a:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+  .news-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .news-cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .news-cards h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
