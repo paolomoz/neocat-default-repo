@@ -1,0 +1,103 @@
+.news-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Gotham-Medium, sans-serif;
+}
+
+.news-card-grid > div {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.news-card-grid > div > div:first-child {
+  margin-bottom: 0;
+}
+
+.news-card-grid > div > div:first-child img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card-grid > div > div:nth-child(2) h2 {
+  font-family: gotham-light, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  margin: 0;
+  padding: 26px 0 12px;
+}
+
+.news-card-grid > div > div:nth-child(3) .date {
+  font-family: Gotham-Medium, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin: 0 0 16px 0;
+}
+
+.news-card-grid > div > div:nth-child(4) p {
+  font-family: Gotham-Book, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 24px;
+  margin: 0 0 20px 0;
+}
+
+.news-card-grid > div > div:nth-child(5) a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Gotham-Book, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.news-card-grid > div > div:nth-child(5) a::after {
+  content: '→';
+  font-size: 18px;
+  color: rgb(97, 18, 107);
+  transition: transform 0.2s ease;
+}
+
+.news-card-grid > div > div:nth-child(5) a:hover::after {
+  transform: translateX(4px);
+}
+
+.news-card-grid > div > div:nth-child(5) a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .news-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .news-card-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px 16px;
+  }
+  
+  .news-card-grid > div > div:nth-child(2) h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
