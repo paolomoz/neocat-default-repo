@@ -1,0 +1,107 @@
+.booking-options {
+  display: block;
+  font-family: 'Gotham-Medium', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+  color: rgb(51, 51, 51);
+  text-align: left;
+  background-color: transparent;
+  padding: 40px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.booking-options-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.booking-options > div:first-child {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+.booking-options > div:first-child .booking-options-heading {
+  font-family: 'gotham-light', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-options > div:not(:first-child) {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-options-column-title {
+  font-family: 'gotham-light', Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  padding: 26px 0 12px;
+  margin: 0;
+}
+
+.booking-options-description {
+  font-family: 'gotham-medium', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin: 0 0 20px 0;
+}
+
+.booking-options-cta {
+  margin-top: auto;
+}
+
+.booking-options-cta a {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Gotham-Book', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(190, 0, 90);
+  line-height: 20.8px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.booking-options-cta a::after {
+  content: '→';
+  margin-left: 8px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.booking-options-cta a:hover {
+  text-decoration: underline;
+}
+
+.booking-options-cta a:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .booking-options-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .booking-options > div:first-child .booking-options-heading {
+    font-size: 26px;
+  }
+  
+  .booking-options-column-title {
+    font-size: 22px;
+    padding: 16px 0 10px;
+  }
+}
