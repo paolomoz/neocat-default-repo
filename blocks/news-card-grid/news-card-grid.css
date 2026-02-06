@@ -1,0 +1,97 @@
+.news-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Gotham-Medium, sans-serif;
+}
+
+.news-card-grid > div {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.news-card-grid .card-image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.news-card-grid .card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card-grid .card-title h2 {
+  font-family: gotham-light, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  margin: 0;
+  padding: 16px 0 8px;
+}
+
+.news-card-grid .card-date {
+  font-family: gotham-medium, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.news-card-grid .card-description {
+  font-family: Gotham-Book, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.news-card-grid .card-description p {
+  margin: 0;
+}
+
+.news-card-grid .card-cta a {
+  display: inline-flex;
+  align-items: center;
+  font-family: Gotham-Book, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 20.8px;
+}
+
+.news-card-grid .card-cta a::after {
+  content: '→';
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.news-card-grid .card-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .news-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .news-card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
